@@ -18,6 +18,8 @@ See it in action in our [sample](https://cdn.rawgit.com/jhoguet/loading-page/mas
 </div>
 ```
 
+And if you want to transition your content in, we will inject the `loaded` class on body when we are done transitioning the loading page away.
+
 ### How it Works
 The script will create an iframe and inject it onto the page with your `.loading-page` element cloned inside. 
 
@@ -27,7 +29,9 @@ We use an iframe for one primary reason, css. We beleive that the only thing on 
 
 By putting it all in an iFrame it is completely insulated from your app, and your app is completely isolated from it. 
 
-In fact, when using loading-page you shouldn't find any remnant that we were ever there. We remove the `.loading-page` element (which contained the script tag that got us running). We delete the iframe we inject shortly after you call `doneLoading()` and we delete the global then too. 
+In fact, when using loading-page you shouldn't find any remnant that we were ever there. We remove the `.loading-page` element (which contained the script tag that got us running). We delete the iframe we inject shortly after you call `doneLoading()` and we delete the global then too.
+
+We lied... we do leave the `loaded` class on `body`, consider it a gift :)
 
 When you call `doneLoading()` we will do a transition to fade out the loading page, and then your content will be visible. 
 
