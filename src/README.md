@@ -1,6 +1,6 @@
 # loading-page
 
-Displaying a loading page for your user while your single page app is loading shouldn't be hard... let loading-page do the work.
+Displaying a loading page for your user while your single page app is loading shouldn't be hard... let [loading-page][1] do the work.
 
 See it in action in our [sample](https://cdn.rawgit.com/jhoguet/loading-page/master/dist/sample.html?v=sha)...
 
@@ -28,18 +28,22 @@ We use an iframe for one primary reason, css. We beleive that the only thing on 
 
 By putting it all in an iFrame it is completely insulated from your app, and your app is completely isolated from it. 
 
-In fact, when using loading-page you shouldn't find any remnant that we were ever there. We remove the `.loading-page` element (which contained the script tag that got us running). We delete the iframe we inject shortly after you call `doneLoading()` and we delete the global then too.
+In fact, when using [loading-page][1] you shouldn't find any remnant that we were ever there. We remove the `.loading-page` element (which contained the script tag that got us running). We delete the iframe we inject shortly after you call `doneLoading()` and we delete the global then too.
 
 We lied... we do leave the `loaded` class on `body`, consider it a gift :)
 
-When you call `doneLoading()` we will do a transition to fade out the loading page, and then your content will be visible. 
+When you call `doneLoading()` we will fade out the loading page, at which point your content will be visible.
+
+If you want to animate your content in, leverage the `loaded` class we put on body when we're done.
 
 
 ### Building
 
-`npm run build` will do everything for you. This is an unusual project in that we are committing built artificats (like this readme actually). This is because we expect the way people get loading-page into their app is by copy-pasta rather than  a package manager, so we want the content in github to be the content they would copy.
+`npm run build` will do everything for you. This is an unusual project in that we are committing built artifacts (like this readme actually). This is because we expect people will get [loading-page][1] into their app is by copy-pasta rather than  a package manager, so we want the content in github to be the content they would copy.
 
 ### Backlog
 - [ ] Ability to customize animation
 - [ ] document how you could update the loading page while you are loading content
 - [ ] animate main content (fade in) after fading out the loading page
+
+[1]: ./
