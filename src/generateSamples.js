@@ -15,6 +15,10 @@ fs.writeFileSync(path.join(__dirname, '../dist/sample.html'), templatedSamplePag
 
 var readme = fs.readFileSync(path.join(__dirname, './README.md')).toString();
 
-var templatedReadme= readme.replace('{{loading-page.min.js}}', js);
+// assumes sha was passed in as arg - see [package.json].scripts.build
+var sha = process.argv[2]
+
+var templatedReadme= readme.replace('{{loading-page.min.js}}', js)
+    .replace('v=sha', 'v=' + sha);
 
 fs.writeFileSync(path.join(__dirname, '../README.md'), templatedReadme);

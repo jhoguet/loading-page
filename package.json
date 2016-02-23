@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "an initial loading page pattern and toolkit for single page apps",
   "scripts": {
-    "build": "npm install && node ./src/index.js && npm run _uglify && node ./src/generateSamples.js",
+    "build": "npm install && node ./src/index.js && npm run _uglify && node ./src/generateSamples.js $(git rev-parse --short HEAD)",
     "_uglify" : "node_modules/.bin/uglifyjs --compress --mangle -- ./dist/loading-page.js > ./dist/loading-page.min.js"
   },
   "author": "Jon Hoguet <jhoguet@gmail.com>",
