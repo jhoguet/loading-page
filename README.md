@@ -2,7 +2,7 @@
 
 Displaying a loading page for your user while your single page app is loading shouldn't be hard... let [loading-page][1] do the work.
 
-See it in action in our [sample](https://cdn.rawgit.com/jhoguet/loading-page/master/dist/sample.html?v=c38106a)...
+See it in action in our [sample](https://cdn.rawgit.com/jhoguet/loading-page/master/dist/sample.html?v=158f0ca)...
 
 ### Getting Started
 
@@ -47,4 +47,4 @@ If you want to animate your content in, leverage the `loaded` class we put on bo
 - [ ] document how you could update the loading page while you are loading content
 - [ ] animate main content (fade in) after fading out the loading page
 
-[1]: ./
+[1]: https://github.com/jhoguet/loading-page

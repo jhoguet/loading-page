@@ -46,4 +46,4 @@ If you want to animate your content in, leverage the `loaded` class we put on bo
 - [ ] document how you could update the loading page while you are loading content
 - [ ] animate main content (fade in) after fading out the loading page
 
-[1]: ./
+[1]: https://github.com/jhoguet/loading-page
