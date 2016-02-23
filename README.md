@@ -1,6 +1,8 @@
 # loading-page
 
-Displaying a loading page for your user while your single page app is loading shouldn't be hard... let loading-page do the work. 
+Displaying a loading page for your user while your single page app is loading shouldn't be hard... let loading-page do the work.
+
+See it in action in our [sample](https://cdn.rawgit.com/jhoguet/loading-page/master/dist/sample.html)...
 
 ### Getting Started
 
