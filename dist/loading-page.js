@@ -5,7 +5,7 @@
 
     var originalLoadingPageEl = document.querySelector('.loading-page');
 
-    var html = '<!DOCTYPE html><html lang="en"><head>    <meta charset="utf-8">    <meta http-equiv="X-UA-Compatible" content="IE=Edge">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    </head><body>{{iframe-inner-html}}</body></html>';
+    var html = '<!DOCTYPE html><html lang="en"><head>    <meta charset="utf-8">    <meta http-equiv="X-UA-Compatible" content="IE=Edge">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <style>        @keyframes loadingPageFadeOut {            0% {                opacity: 1;            }            100% {                opacity: 0;            }        }        .loading-page.fade-out {            animation-name: loadingPageFadeOut;            animation-duration: .25s;            transition-timing-function: ease-out;            opacity: 0;            animation-fill-mode: both;        }    </style></head><body>{{iframe-inner-html}}</body></html>';
 
     html = html.replace('{{iframe-inner-html}}', originalLoadingPageEl.outerHTML);
 

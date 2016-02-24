@@ -2,21 +2,22 @@
 
 Displaying a loading page for your user while your single page app is loading shouldn't be hard... let [loading-page][1] do the work.
 
-See it in action in our [sample](https://cdn.rawgit.com/jhoguet/loading-page/master/dist/sample.html?v=158f0ca)...
+See it in action in our [sample](https://cdn.rawgit.com/jhoguet/loading-page/master/dist/sample.html?v=b81b5c6)...
 
 ### Getting Started
 
 1. Put all of your Loading Page content (to include styles) inside a div with class name `loading-page`
 2. Also put the loading-page javascript inline in the div
-3. When your app is ready, call `window.loadingPage.doneLoading()`
 ```html
 <div class="loading-page">
 	<style>h1 { text-align : center; }</style>
 	<h1>Loading all sorts of goodies...</h1>
-    <script>!function(){function e(){this.element=function(e){return e(d.contentWindow.document.querySelector(".loading-page")),this}.bind(this),this.doneLoading=function(){delete window.loadingPage,this.element(function(e){e.classList.add("fade-out")}),setTimeout(function(){document.body.removeChild(d),document.body.classList.add("loaded")},250)}}var t=document.querySelector(".loading-page script");t.parentNode.removeChild(t);var n=document.querySelector(".loading-page"),o='<!DOCTYPE html><html lang="en"><head>    <meta charset="utf-8">    <meta http-equiv="X-UA-Compatible" content="IE=Edge">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    </head><body>{{iframe-inner-html}}</body></html>';o=o.replace("{{iframe-inner-html}}",n.outerHTML);var d=document.createElement("iframe");d.setAttribute("style","position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"),document.body.appendChild(d),d.contentWindow.document.open(),d.contentWindow.document.write(o),d.contentWindow.document.close(),n.parentNode.removeChild(n),window.loadingPage=new e}();
+    <script>!function(){function e(){this.element=function(e){return e(i.contentWindow.document.querySelector(".loading-page")),this}.bind(this),this.doneLoading=function(){delete window.loadingPage,this.element(function(e){e.classList.add("fade-out")}),setTimeout(function(){document.body.removeChild(i),document.body.classList.add("loaded")},250)}}var t=document.querySelector(".loading-page script");t.parentNode.removeChild(t);var n=document.querySelector(".loading-page"),o='<!DOCTYPE html><html lang="en"><head>    <meta charset="utf-8">    <meta http-equiv="X-UA-Compatible" content="IE=Edge">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <style>        @keyframes loadingPageFadeOut {            0% {                opacity: 1;            }            100% {                opacity: 0;            }        }        .loading-page.fade-out {            animation-name: loadingPageFadeOut;            animation-duration: .25s;            transition-timing-function: ease-out;            opacity: 0;            animation-fill-mode: both;        }    </style></head><body>{{iframe-inner-html}}</body></html>';o=o.replace("{{iframe-inner-html}}",n.outerHTML);var i=document.createElement("iframe");i.setAttribute("style","position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"),document.body.appendChild(i),i.contentWindow.document.open(),i.contentWindow.document.write(o),i.contentWindow.document.close(),n.parentNode.removeChild(n),window.loadingPage=new e}();
 </script>
 </div>
 ```
+3. When your app is ready, call `window.loadingPage.doneLoading()`
+
 
 And if you want to transition your content in, we will inject the `loaded` class on body when we are done transitioning the loading page away.
 

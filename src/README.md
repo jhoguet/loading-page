@@ -8,7 +8,6 @@ See it in action in our [sample](https://cdn.rawgit.com/jhoguet/loading-page/mas
 
 1. Put all of your Loading Page content (to include styles) inside a div with class name `loading-page`
 2. Also put the loading-page javascript inline in the div
-3. When your app is ready, call `window.loadingPage.doneLoading()`
 ```html
 <div class="loading-page">
 	<style>h1 { text-align : center; }</style>
@@ -16,6 +15,8 @@ See it in action in our [sample](https://cdn.rawgit.com/jhoguet/loading-page/mas
     <script>{{loading-page.min.js}}</script>
 </div>
 ```
+3. When your app is ready, call `window.loadingPage.doneLoading()`
+
 
 And if you want to transition your content in, we will inject the `loaded` class on body when we are done transitioning the loading page away.
 
