@@ -2,7 +2,7 @@
 
 Displaying a loading page for your user while your single page app is loading shouldn't be hard... let [loading-page][1] do the work.
 
-See it in action in our [sample](https://cdn.rawgit.com/jhoguet/loading-page/master/dist/sample.html?v=b81b5c6)...
+See it in action in our [sample](https://cdn.rawgit.com/jhoguet/loading-page/master/dist/sample.html?v=81b6452) and [advanced-sample](https://cdn.rawgit.com/jhoguet/loading-page/master/dist/advanced-sample.html?v=sha)...
 
 ### Getting Started
 
