@@ -2,7 +2,7 @@
 
 Displaying a loading page for your user while your single page app is loading shouldn't be hard... let [loading-page][1] do the work.
 
-See it in action in our [sample](https://cdn.rawgit.com/jhoguet/loading-page/master/dist/sample.html?v=81b6452) and [advanced-sample](https://cdn.rawgit.com/jhoguet/loading-page/master/dist/advanced-sample.html?v=sha)...
+See it in action in our [sample](https://cdn.rawgit.com/jhoguet/loading-page/master/dist/sample.html?v=a5e9663) and [advanced-sample](https://cdn.rawgit.com/jhoguet/loading-page/master/dist/advanced-sample.html?v=sha)...
 
 ### Getting Started
 
@@ -20,26 +20,6 @@ See it in action in our [sample](https://cdn.rawgit.com/jhoguet/loading-page/mas
 
 
 And if you want to transition your content in, we will inject the `loaded` class on body when we are done transitioning the loading page away.
-
-## Avoid the Scroll Bar gotcha
-
-The iframe still lives in the host pages body... so if the body "grows" to have a scroll bar, you will see the scrollbar next to the iframe, causing the iframe to shift... causing jitter as discussed in #1. To avoid this, simply don't allow the body to be scrollable. 
-
-```css
-html, body {
-    height:100%;
-    overflow: hidden;
-}
-
-body>div {
-    height:100%;
-    overflow-y: scroll;
-}
-```
-
-Now the body isn't scrollable but the div directly below it is. You should use a more appropriate selector for the scrollable area(s) for your app. 
-
-Thanks [@Jeremy Bull](https://github.com/jeremybull) for pointing this out and motiviting me to find a solution. 
 
 ### How it Works
 The script will create an iframe and inject it onto the page with your `.loading-page` element cloned inside. 
